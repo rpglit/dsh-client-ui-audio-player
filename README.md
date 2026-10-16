@@ -39,7 +39,7 @@ profile startup refuse a bundle whose range the running DSH does not satisfy).
 
 ```sh
 # from git (the repository ships prebuilt lib/, so no build permission is needed)
-dsh plugin --profile web add github:ipetrichenko/dsh-client-ui-audio-player
+dsh plugin --profile web add github:rpglit/dsh-client-ui-audio-player
 
 # once published to npm
 dsh plugin --profile web add dsh-client-ui-audio-player

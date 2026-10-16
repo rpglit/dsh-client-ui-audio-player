@@ -45,7 +45,7 @@
 
 ```sh
 # из git (репозиторий содержит предсобранный lib/, поэтому разрешение на сборку не нужно)
-dsh plugin --profile web add github:ipetrichenko/dsh-client-ui-audio-player
+dsh plugin --profile web add github:rpglit/dsh-client-ui-audio-player
 
 # после публикации в npm
 dsh plugin --profile web add dsh-client-ui-audio-player
