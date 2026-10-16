@@ -1,0 +1,80 @@
+{
+  "name": "dsh-client-ui-audio-player",
+  "description": "Play audio files (mp3/wav/ogg/flac/m4a/aac/opus) in the right Sidebar document preview",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipetrichenko/dsh-client-ui-audio-player.git"
+  },
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "locale/*.json",
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc -b tsconfig.json && tsdown",
+    "bundle": "tsdown",
+    "watch": "tsdown --watch",
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-workspace-files",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5-alpha.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.5-alpha.2",
+    "@deepseek-ai/dsh-api-remotes": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-api-workspace-files": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-client-locale": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-client-ui-renderer": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-client-ui-slots": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-client-ui-sidebar-documentpreview": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-session": "0.2.1-alpha.4",
+    "@deepseek-ai/dsh-util-workspace-path": "0.2.1-alpha.4",
+    "@types/react": "~18.3.1",
+    "lightningcss": "1.33.0",
+    "react": "^18.2.0",
+    "tsdown": "0.22.2",
+    "typescript": "6.0.3"
+  }
+}

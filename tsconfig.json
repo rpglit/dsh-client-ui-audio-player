@@ -1,0 +1,37 @@
+{
+  // Standalone client compiler options: mirrors tsconfig.base.json +
+  // tsconfig.base.client.json of deepseek-harness @ fee78d97, minus the
+  // monorepo-only `paths` facade and project `references` — every
+  // @deepseek-ai/* import resolves from node_modules (published packages).
+  "compilerOptions": {
+    "target": "es2024",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "lib": ["ES2024", "DOM", "DOM.Iterable", "ESNext.Disposable"],
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "composite": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": false,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "rootDir": "src",
+    "outDir": "lib/types",
+    "typeRoots": ["./build/types", "./node_modules/@types"],
+    "types": ["client-build-environment"]
+  },
+  "include": [
+    "src"
+  ]
+}

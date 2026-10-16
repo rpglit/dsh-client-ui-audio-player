@@ -1,0 +1,36 @@
+/* The audio body owns its content inset; the owner's body stays the scroll
+   fallback until an inner scrollport reports one. */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: 12px;
+}
+
+.caption {
+  color: var(--dsw-alias-label-primary);
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.size {
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.audio {
+  display: block;
+  width: 100%;
+}
+
+.line {
+  color: var(--dsw-alias-label-secondary);
+  font-size: 12px;
+  line-height: 16px;
+}
