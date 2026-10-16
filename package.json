@@ -38,10 +38,11 @@
     "lib/types/**/*.d.ts"
   ],
   "scripts": {
-    "build": "tsc -b tsconfig.json && tsdown",
-    "bundle": "tsdown",
+    "build": "tsc -b tsconfig.json && tsdown && node scripts/sanitize.mjs && node scripts/smoke.mjs",
+    "bundle": "tsdown && node scripts/sanitize.mjs",
     "watch": "tsdown --watch",
     "smoke": "node scripts/smoke.mjs",
+    "sanitize": "node scripts/sanitize.mjs",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {},
