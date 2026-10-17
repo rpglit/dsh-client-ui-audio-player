@@ -20,12 +20,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Provenance: `src/`, `locale/`, and `build/` are forked from
-`deepseek-ai/deepseek-harness` (MIT License, Copyright (c) 2026 DeepSeek) at
-commit `fee78d97` ("Refresh generated catalogs with the audio player package"),
-snapshot taken 2026-10-16. The `build/` files carry per-file attribution
-headers. This repository is a third-party community package, not affiliated
-with DeepSeek.
